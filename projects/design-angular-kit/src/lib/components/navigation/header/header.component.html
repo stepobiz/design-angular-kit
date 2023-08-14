@@ -3,16 +3,19 @@
 		<div class="row">
 			<div class="col-12">
 				<div class="it-header-slim-wrapper-content">
-					<a class="d-lg-block navbar-brand" [class.d-none]="showAccessoryNavigation()" href="#">{{slimTitle}}</a>
+					<a class="d-lg-block navbar-brand" [class.d-none]="showAccessoryNavigation()"
+						href="#">{{slimTitle}}</a>
 					<div *ngIf="showAccessoryNavigation()" class="nav-mobile">
 						<it-menu [slimTitle]="slimTitle"></it-menu>
 					</div>
 					<div class="it-header-slim-right-zone">
 						<it-language-switcher></it-language-switcher>
-						<div *ngIf="loginStyle === 'default'" class="it-access-top-wrapper" (click)="loginClick.emit($event)">
+						<div *ngIf="loginStyle === 'default'" class="it-access-top-wrapper"
+							(click)="loginClick.emit($event)">
 							<a class="btn btn-primary btn-sm" href="#">{{'it.navigation.login'| translate}}</a>
 						</div>
-						<a *ngIf="loginStyle === 'full'" href="#" class="btn btn-primary btn-icon btn-full" (click)="loginClick.emit($event)">
+						<a *ngIf="loginStyle === 'full'" href="#" class="btn btn-primary btn-icon btn-full"
+							(click)="loginClick.emit($event)">
 							<span class="rounded-icon">
 								<it-icon name="user" color="primary"></it-icon>
 							</span>
@@ -28,43 +31,62 @@
 
 
 
-
-
-
-
-
-
-
-
-
-<header class="it-header-wrapper">
-	<div class="it-nav-wrapper">
-		<div class="it-header-center-wrapper" [class.it-small-header]="isSmallHeader">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-12">
-						<div class="it-header-center-content-wrapper">
-							<div class="it-brand-wrapper">
-								<ng-content select="[brand]"></ng-content>
+<div class="it-header-center-wrapper" [class.it-small-header]="isSmallHeader">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="it-header-center-content-wrapper">
+					<div class="it-brand-wrapper">
+						<ng-content select="[brand]"></ng-content>
+						<a href="#">
+							<svg class="icon" aria-hidden="true">
+								<use href="/bootstrap-italia/dist/svg/sprites.svg#it-pa"></use>
+							</svg>
+							<div class="it-brand-text">
+								<div class="it-brand-title">Nome dell'Istituzione</div>
+								<div class="it-brand-tagline d-none d-md-block">Tag line dell'Istituzione</div>
 							</div>
-							<div class="it-right-zone">
-								<ng-content select="[rightZone]"></ng-content>
-
-								<div class="it-search-wrapper" *ngIf="isShowSearch">
-									<span class="d-none d-md-block">{{'it.navigation.search'|translate}}</span>
-									<a class="search-link rounded-icon"
-										[attr.aria-label]="'it.navigation.website-search'|translate"
-										(click)="searchClick.emit($event)">
-										<it-icon name="search"></it-icon>
+						</a>
+					</div>
+					<div class="it-right-zone">
+						<ng-content select="[rightZone]"></ng-content>
+						<div class="it-socials d-none d-md-flex">
+							<span>Seguici su</span>
+							<ul>
+								<li>
+									<a href="#" aria-label="Facebook" target="_blank">
+										<svg class="icon">
+											<use href="/bootstrap-italia/dist/svg/sprites.svg#it-facebook"></use>
+										</svg>
 									</a>
-								</div>
-							</div>
+								</li>
+								<li>
+									<a href="#" aria-label="Github" target="_blank">
+										<svg class="icon">
+											<use href="/bootstrap-italia/dist/svg/sprites.svg#it-github"></use>
+										</svg>
+									</a>
+								</li>
+								<li>
+									<a href="#" aria-label="Twitter" target="_blank">
+										<svg class="icon">
+											<use href="/bootstrap-italia/dist/svg/sprites.svg#it-twitter"></use>
+										</svg>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="it-search-wrapper" *ngIf="isShowSearch">
+							<span class="d-none d-md-block">{{'it.navigation.search'|translate}}</span>
+							<a class="search-link rounded-icon"
+								[attr.aria-label]="'it.navigation.website-search'|translate"
+								(click)="searchClick.emit($event)">
+								<it-icon name="search"></it-icon>
+							</a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-
-		<!-- TODO: complete header -->
 	</div>
-</header>
+</div>
