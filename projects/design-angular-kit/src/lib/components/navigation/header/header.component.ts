@@ -5,6 +5,9 @@ import { NgIf } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { ItIconComponent } from '../../utils/icon/icon.component';
 import { ItButtonDirective } from '../../core/button/button.directive';
+import { ItLanguageSwitcherComponent } from '../../utils/language-switcher/language-switcher.component';
+import { ItMenuComponent } from '../menu/menu.component';
+import { ItMenuConfig } from '../menu/menu.interface';
 
 @Component({
   standalone: true,
@@ -12,7 +15,7 @@ import { ItButtonDirective } from '../../core/button/button.directive';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [NgIf, TranslateModule, ItIconComponent, ItButtonDirective]
+  imports: [NgIf, TranslateModule, ItIconComponent, ItLanguageSwitcherComponent, ItMenuComponent, ItButtonDirective]
 })
 export class ItHeaderComponent extends ItAbstractComponent {
 
@@ -22,7 +25,9 @@ export class ItHeaderComponent extends ItAbstractComponent {
 
   @Input() slimTitle: string | undefined;
 
-  @Input() loginStyle: 'none' | 'default' | 'full' = 'full';
+  @Input() accessoryNavigation: ItMenuConfig | undefined;
+
+  @Input() loginStyle: 'none' | 'default' | 'full' = 'default';
 
   @Input() smallHeader?: BooleanInput = true;
 
@@ -56,6 +61,10 @@ export class ItHeaderComponent extends ItAbstractComponent {
 
   get isShowSearch(): boolean {
     return isTrueBooleanInput(this.showSearch);
+  }
+
+  showAccessoryNavigation(): boolean {
+	return (this.accessoryNavigation !== undefined);
   }
 
 }

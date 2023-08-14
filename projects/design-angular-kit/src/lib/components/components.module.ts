@@ -26,13 +26,14 @@ import { ItFormModule } from './form/form.module';
 import { ItBackButtonComponent } from './navigation/back-button/back-button.component';
 import { ItBackToTopComponent } from './navigation/back-to-top/back-to-top.component';
 import { ItBreadcrumbsModule } from './navigation/breadcrumbs/breadcrumbs.module';
-import { ItHeaderComponent } from './navigation/header/header.component';
+import { ItHeadersModule } from './navigation/header/header.module';
 import { ItIconComponent } from './utils/icon/icon.component';
 import { ItLanguageSwitcherComponent } from './utils/language-switcher/language-switcher.component';
 import { ItErrorPageComponent } from './utils/error-page/error-page.component';
 import { ItChipComponent } from './core/chip/chip.component';
 import { ItForwardDirective } from './core/forward/forward.directive';
 import { MarkMatchingTextPipe } from '../pipes/mark-matching-text.pipe';
+import { ItMenusModule } from './navigation/menu/menu.module';
 
 
 /**
@@ -73,7 +74,8 @@ const navigation = [
   ItBackButtonComponent,
   ItBackToTopComponent,
   ItBreadcrumbsModule,
-  ItHeaderComponent
+  ItHeadersModule,
+  ItMenusModule
 ];
 
 /**

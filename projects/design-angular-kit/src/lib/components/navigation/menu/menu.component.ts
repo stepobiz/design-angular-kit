@@ -1,5 +1,4 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
-import { BooleanInput, isTrueBooleanInput } from '../../../utils/boolean-input';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { ItAbstractComponent } from '../../../abstracts/abstract.component';
 import { NgIf } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
