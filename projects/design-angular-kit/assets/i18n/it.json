@@ -98,7 +98,9 @@
       "search": "Cerca",
       "website-search": "Cerca nel sito",
       "navigation-path": "Percorso di navigazione",
-	  "follow-on": "Seguici su"
+	  "follow-on": "Seguici su",
+	  "show": "Mostra",
+	  "hide-navigation": "Nascondi la navigazione"
     },
     "utils": {
       "selected": "Selezionata",

@@ -91,13 +91,16 @@
       "home": "Home",
       "go-back": "Go back",
       "upper-level": "Upper level",
+	  "main-navigation": "Primary principale",
       "secondary-navigation": "Secondary navigation",
       "login": "Log in",
       "full-login": "Access the personal area",
       "search": "Search",
       "website-search": "Search in the site",
       "navigation-path": "Navigation path",
-	  "follow-on": "Follow on"
+	  "follow-on": "Follow on",
+	  "show": "Show",
+	  "hide-navigation": "Hide navigation"
     },
     "utils": {
       "selected": "Selected",
