@@ -99,7 +99,7 @@ export class AppComponent {
 				},
 				{
 					type: 'megamenu-child',
-					title: 'Sezione 1',
+					title: 'Sezione 2',
 					items: [
 						{
 							type: 'link',
@@ -129,7 +129,7 @@ export class AppComponent {
 				},
 				{
 					type: 'megamenu-child',
-					title: 'Sezione 1',
+					title: 'Sezione 3',
 					items: [
 						{
 							type: 'link',
