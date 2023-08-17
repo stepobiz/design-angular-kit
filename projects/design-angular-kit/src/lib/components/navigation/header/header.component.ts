@@ -8,6 +8,7 @@ import { ItButtonDirective } from '../../core/button/button.directive';
 import { ItLanguageSwitcherComponent } from '../../utils/language-switcher/language-switcher.component';
 import { ItMenuComponent } from '../menu/menu.component';
 import { ItMenuConfig } from '../menu/menu.interface';
+import { ItMenusModule } from '../menu/menu.module';
 
 @Component({
   standalone: true,
@@ -15,7 +16,7 @@ import { ItMenuConfig } from '../menu/menu.interface';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [NgIf, TranslateModule, ItIconComponent, ItLanguageSwitcherComponent, ItMenuComponent, ItButtonDirective]
+  imports: [NgIf, TranslateModule, ItIconComponent, ItLanguageSwitcherComponent, ItMenusModule, ItButtonDirective]
 })
 export class ItHeaderComponent extends ItAbstractComponent {
 
@@ -25,7 +26,172 @@ export class ItHeaderComponent extends ItAbstractComponent {
 
   @Input() slimTitle: string | undefined;
 
-  @Input() accessoryNavigation: ItMenuConfig | undefined;
+  @Input() mainNavigation: ItMenuConfig | undefined = {
+	type: 'navbar',
+	label: 'it.navigation.main-navigation',
+	items: [
+		{
+			type: 'link',
+			label: 'Link 1',
+			link: '#'
+		},
+		{
+			type: 'link',
+			label: 'Link 2',
+			disabled: true,
+			link: '#'
+		},
+		{
+			type: 'link',
+			label: 'Link 3',
+			link: '#'
+		},
+		{
+			type: 'dropdown',
+			label: 'Menu Dropdown',
+			title: 'Sezione',
+			items: [
+				{
+					type: 'link',
+					label: 'Link lista 1',
+					link: '#'
+				},
+				{
+					type: 'link',
+					label: 'Link lista 2',
+					disabled: true,
+					link: '#'
+				},
+				{
+					type: 'link',
+					label: 'Link lista 3',
+					link: '#'
+				},
+				{
+					type: 'divider'
+				},
+				{
+					type: 'link',
+					label: 'Link lista 4',
+					link: '#'
+				}
+			]
+		},
+		{
+			type: 'megamenu',
+			label: 'Megamenu',
+			items: [
+				{
+					type: 'megamenu-child',
+					title: 'Sezione 1',
+					items: [
+						{
+							type: 'link',
+							label: 'Link lista 1',
+							link: '#'
+						},
+						{
+							type: 'link',
+							label: 'Link lista 2',
+							disabled: true,
+							link: '#'
+						},
+						{
+							type: 'link',
+							label: 'Link lista 3',
+							link: '#'
+						},
+						{
+							type: 'divider'
+						},
+						{
+							type: 'link',
+							label: 'Link lista 4',
+							link: '#'
+						}
+					]
+				},
+				{
+					type: 'megamenu-child',
+					title: 'Sezione 1',
+					items: [
+						{
+							type: 'link',
+							label: 'Link lista 1',
+							link: '#'
+						},
+						{
+							type: 'link',
+							label: 'Link lista 2',
+							disabled: true,
+							link: '#'
+						},
+						{
+							type: 'link',
+							label: 'Link lista 3',
+							link: '#'
+						},
+						{
+							type: 'divider'
+						},
+						{
+							type: 'link',
+							label: 'Link lista 4',
+							link: '#'
+						}
+					]
+				},
+				{
+					type: 'megamenu-child',
+					title: 'Sezione 1',
+					items: [
+						{
+							type: 'link',
+							label: 'Link lista 1',
+							link: '#'
+						},
+						{
+							type: 'link',
+							label: 'Link lista 2',
+							disabled: true,
+							link: '#'
+						},
+						{
+							type: 'link',
+							label: 'Link lista 3',
+							link: '#'
+						},
+						{
+							type: 'divider'
+						},
+						{
+							type: 'link',
+							label: 'Link lista 4',
+							link: '#'
+						}
+					]
+				}
+			]
+		},
+	]
+  };
+
+  @Input() secondaryNavigation: ItMenuConfig | undefined = {
+	type: 'link-list',
+	label: 'it.navigation.secondary-navigation',
+	items: [
+		{
+			type: 'link',
+			label: 'Link 1',
+			link: '#'
+		},
+		{
+			type: 'link',
+			label: 'Link 2',
+			link: '#'
+		},
+	]
+  };
 
   @Input() loginStyle: 'none' | 'default' | 'full' = 'default';
 
@@ -63,8 +229,8 @@ export class ItHeaderComponent extends ItAbstractComponent {
     return isTrueBooleanInput(this.showSearch);
   }
 
-  showAccessoryNavigation(): boolean {
-	return (this.accessoryNavigation !== undefined);
+  showSecondaryNavigation(): boolean {
+	return (this.secondaryNavigation !== undefined);
   }
 
 }

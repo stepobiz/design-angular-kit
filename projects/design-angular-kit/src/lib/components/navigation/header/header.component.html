@@ -3,11 +3,8 @@
 		<div class="row">
 			<div class="col-12">
 				<div class="it-header-slim-wrapper-content">
-					<a class="d-lg-block navbar-brand" [class.d-none]="showAccessoryNavigation()"
-						href="#">{{slimTitle}}</a>
-					<div *ngIf="showAccessoryNavigation()" class="nav-mobile">
-						<it-menu [slimTitle]="slimTitle"></it-menu>
-					</div>
+					<a class="d-lg-block navbar-brand" [class.d-none]="showSecondaryNavigation()" href="#">{{slimTitle}}</a>
+					<it-menu *ngIf="showSecondaryNavigation()" [menuConfig]="secondaryNavigation" class="nav-mobile" [slimTitle]="slimTitle"></it-menu>
 					<div class="it-header-slim-right-zone">
 						<it-language-switcher></it-language-switcher>
 						<div *ngIf="loginStyle === 'default'" class="it-access-top-wrapper"
@@ -39,9 +36,7 @@
 					<div class="it-brand-wrapper">
 						<ng-content select="[brand]"></ng-content>
 						<a href="#">
-							<svg class="icon" aria-hidden="true">
-								<use href="/bootstrap-italia/dist/svg/sprites.svg#it-pa"></use>
-							</svg>
+							<it-icon name="pa"></it-icon>
 							<div class="it-brand-text">
 								<div class="it-brand-title">Nome dell'Istituzione</div>
 								<div class="it-brand-tagline d-none d-md-block">Tag line dell'Istituzione</div>
@@ -51,27 +46,21 @@
 					<div class="it-right-zone">
 						<ng-content select="[rightZone]"></ng-content>
 						<div class="it-socials d-none d-md-flex">
-							<span>Seguici su</span>
+							<span>{{'it.navigation.follow-on'| translate}}</span>
 							<ul>
 								<li>
 									<a href="#" aria-label="Facebook" target="_blank">
-										<svg class="icon">
-											<use href="/bootstrap-italia/dist/svg/sprites.svg#it-facebook"></use>
-										</svg>
+										<it-icon name="facebook"></it-icon>
 									</a>
 								</li>
 								<li>
 									<a href="#" aria-label="Github" target="_blank">
-										<svg class="icon">
-											<use href="/bootstrap-italia/dist/svg/sprites.svg#it-github"></use>
-										</svg>
+										<it-icon name="github"></it-icon>
 									</a>
 								</li>
 								<li>
 									<a href="#" aria-label="Twitter" target="_blank">
-										<svg class="icon">
-											<use href="/bootstrap-italia/dist/svg/sprites.svg#it-twitter"></use>
-										</svg>
+										<it-icon name="twitter"></it-icon>
 									</a>
 								</li>
 							</ul>
@@ -103,118 +92,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
-				<!--start nav-->
-				<nav class="navbar navbar-expand-lg has-megamenu" aria-label="Navigazione principale">
-					<button class="custom-navbar-toggler" type="button" aria-controls="nav1" aria-expanded="false"
-						aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible"
-						data-bs-target="#nav1">
-						<svg class="icon bg-override">
-							<use href="/bootstrap-italia/dist/svg/sprites.svg#it-burger"></use>
-						</svg>
-					</button>
-					<div class="navbar-collapsable" id="nav1" style="display: none;">
-						<div class="overlay" style="display: none;"></div>
-						<div class="close-div">
-							<button class="btn close-menu" type="button">
-								<span class="visually-hidden">Nascondi la navigazione</span>
-								<svg class="icon">
-									<use href="/bootstrap-italia/dist/svg/sprites.svg#it-close-big"></use>
-								</svg>
-							</button>
-						</div>
-						<div class="menu-wrapper">
-							<ul class="navbar-nav">
-								<li class="nav-item active"><a class="nav-link active" href="#"
-										aria-current="page"><span>Link 1 (attivo)</span></a></li>
-								<li class="nav-item"><a class="nav-link disabled" href="#"
-										aria-disabled="true"><span>Link 2 (disabilitato)</span></a></li>
-								<li class="nav-item"><a class="nav-link" href="#"><span>Link 3</span></a></li>
-								<li class="nav-item"><a class="nav-link" href="#"><span>Link 4</span></a></li>
-								<li class="nav-item dropdown">
-									<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
-										aria-expanded="false" id="mainNavDropdown1">
-										<span>Menu Dropdown</span>
-										<svg class="icon icon-xs">
-											<use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use>
-										</svg>
-									</a>
-									<div class="dropdown-menu" role="region" aria-labelledby="mainNavDropdown1">
-										<div class="link-list-wrapper">
-											<div class="link-list-heading">Sezione</div>
-											<ul class="link-list">
-												<li><a class="dropdown-item list-item" href="#"><span>Link lista
-															1</span></a></li>
-												<li><a class="dropdown-item list-item" href="#"><span>Link lista
-															2</span></a></li>
-												<li><a class="dropdown-item list-item" href="#"><span>Link lista
-															3</span></a></li>
-												<li><span class="divider"></span></li>
-												<li><a class="dropdown-item list-item" href="#"><span>Link lista
-															4</span></a></li>
-											</ul>
-										</div>
-									</div>
-								</li>
-								<li class="nav-item dropdown megamenu">
-									<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
-										aria-expanded="false" id="mainNavMegamenu1">
-										<span>Megamenu</span>
-										<svg class="icon icon-xs">
-											<use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use>
-										</svg>
-									</a>
-									<div class="dropdown-menu" role="region" aria-labelledby="mainNavMegamenu1">
-										<div class="row">
-											<div class="col-12 col-lg-4">
-												<div class="link-list-wrapper">
-													<div class="link-list-heading">Sezione 1</div>
-													<ul class="link-list">
-														<li><a class="dropdown-item list-item" href="#"><span>Link lista
-																	1</span></a></li>
-														<li><a class="dropdown-item list-item" href="#"><span>Link lista
-																	2</span></a></li>
-														<li><a class="dropdown-item list-item" href="#"><span>Link lista
-																	3</span></a></li>
-													</ul>
-												</div>
-											</div>
-											<div class="col-12 col-lg-4">
-												<div class="link-list-wrapper">
-													<ul class="link-list">
-														<li>
-															<div class="link-list-heading">Sezione 2</div>
-														</li>
-														<li><a class="dropdown-item list-item" href="#"><span>Link lista
-																	4</span></a></li>
-														<li><a class="dropdown-item list-item" href="#"><span>Link lista
-																	5</span></a></li>
-														<li><a class="dropdown-item list-item" href="#"><span>Link lista
-																	6</span></a></li>
-													</ul>
-												</div>
-											</div>
-											<div class="col-12 col-lg-4">
-												<div class="link-list-wrapper">
-													<ul class="link-list">
-														<li>
-															<div class="link-list-heading">Sezione 3</div>
-														</li>
-														<li><a class="dropdown-item list-item" href="#"><span>Link lista
-																	7</span></a></li>
-														<li><a class="dropdown-item list-item" href="#"><span>Link lista
-																	8</span></a></li>
-														<li><a class="dropdown-item list-item" href="#"><span>Link lista
-																	9</span></a></li>
-													</ul>
-												</div>
-											</div>
-										</div>
-									</div>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</nav>
+				<it-menu [menuConfig]="mainNavigation"></it-menu>
 			</div>
 		</div>
 	</div>

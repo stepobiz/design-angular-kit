@@ -91,12 +91,14 @@
       "home": "Home",
       "go-back": "Torna indietro",
       "upper-level": "Livello superiore",
+	  "main-navigation": "Navigazione principale",
       "secondary-navigation": "Navigazione secondaria",
       "login": "Accedi",
       "full-login": "Accedi all'area personale",
       "search": "Cerca",
       "website-search": "Cerca nel sito",
-      "navigation-path": "Percorso di navigazione"
+      "navigation-path": "Percorso di navigazione",
+	  "follow-on": "Seguici su"
     },
     "utils": {
       "selected": "Selezionata",
