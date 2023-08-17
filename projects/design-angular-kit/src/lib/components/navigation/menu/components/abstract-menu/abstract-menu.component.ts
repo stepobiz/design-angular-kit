@@ -1,14 +1,13 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { ItAbstractComponent } from '../../../abstracts/abstract.component';
-import { ItMenuConfig, ItMenuItem } from './menu.interface';
+import { ItAbstractComponent } from 'projects/design-angular-kit/src/lib/abstracts/abstract.component';
+import { ItMenuConfig, ItMenuItem } from '../../menu.interface';
 
 @Component({
   selector: 'it-menu',
-  templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.scss'],
+  templateUrl: './abstract-menu.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ItMenuComponent extends ItAbstractComponent {
+export class ItAbstractMenuComponent extends ItAbstractComponent {
 
   @Input({ required: true }) menuConfig: ItMenuConfig;
 

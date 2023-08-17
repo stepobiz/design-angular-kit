@@ -6,7 +6,6 @@ import { TranslateModule } from '@ngx-translate/core';
 import { ItIconComponent } from '../../utils/icon/icon.component';
 import { ItButtonDirective } from '../../core/button/button.directive';
 import { ItLanguageSwitcherComponent } from '../../utils/language-switcher/language-switcher.component';
-import { ItMenuComponent } from '../menu/menu.component';
 import { ItMenuConfig } from '../menu/menu.interface';
 import { ItMenusModule } from '../menu/menu.module';
 

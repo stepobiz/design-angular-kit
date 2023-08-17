@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
-import { ItMenuComponent } from './menu.component';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { ItIconComponent } from '../../utils/icon/icon.component';
 import { ItMenuDropdownComponent } from './components/dropdown/dropdown.component';
+import { ItAbstractMenuComponent } from './components/abstract-menu/abstract-menu.component';
 
 @NgModule({
   imports: [
@@ -13,12 +13,13 @@ import { ItMenuDropdownComponent } from './components/dropdown/dropdown.componen
 	
   ],
   declarations: [
-	ItMenuComponent,
+	ItAbstractMenuComponent,
 	ItMenuDropdownComponent,
 
   ],
   exports: [
-	ItMenuComponent
+	ItAbstractMenuComponent,
+	
   ]
 })
 export class ItMenusModule {
