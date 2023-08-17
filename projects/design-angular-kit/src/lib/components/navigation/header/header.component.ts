@@ -26,196 +26,11 @@ export class ItHeaderComponent extends ItAbstractComponent {
 
   @Input() slimTitle: string | undefined;
 
-  @Input() mainNavigation: ItMenuConfig | undefined = {
-	type: 'navbar',
-	label: 'it.navigation.main-navigation',
-	items: [
-		{
-			type: 'link',
-			label: 'Link 1',
-			link: '#'
-		},
-		{
-			type: 'link',
-			label: 'Link 2',
-			disabled: true,
-			link: '#'
-		},
-		{
-			type: 'link',
-			label: 'Link 3',
-			link: '#'
-		},
-		{
-			type: 'dropdown',
-			label: 'Menu Dropdown',
-			title: 'Sezione',
-			items: [
-				{
-					type: 'link',
-					label: 'Link lista 1',
-					link: '#'
-				},
-				{
-					type: 'link',
-					label: 'Link lista 2',
-					disabled: true,
-					link: '#'
-				},
-				{
-					type: 'link',
-					label: 'Link lista 3',
-					link: '#'
-				},
-				{
-					type: 'divider'
-				},
-				{
-					type: 'link',
-					label: 'Link lista 4',
-					link: '#'
-				}
-			]
-		},
-		{
-			type: 'megamenu',
-			label: 'Megamenu',
-			items: [
-				{
-					type: 'megamenu-child',
-					title: 'Sezione 1',
-					items: [
-						{
-							type: 'link',
-							label: 'Link lista 1',
-							link: '#'
-						},
-						{
-							type: 'link',
-							label: 'Link lista 2',
-							disabled: true,
-							link: '#'
-						},
-						{
-							type: 'link',
-							label: 'Link lista 3',
-							link: '#'
-						},
-						{
-							type: 'divider'
-						},
-						{
-							type: 'link',
-							label: 'Link lista 4',
-							link: '#'
-						}
-					]
-				},
-				{
-					type: 'megamenu-child',
-					title: 'Sezione 1',
-					items: [
-						{
-							type: 'link',
-							label: 'Link lista 1',
-							link: '#'
-						},
-						{
-							type: 'link',
-							label: 'Link lista 2',
-							disabled: true,
-							link: '#'
-						},
-						{
-							type: 'link',
-							label: 'Link lista 3',
-							link: '#'
-						},
-						{
-							type: 'divider'
-						},
-						{
-							type: 'link',
-							label: 'Link lista 4',
-							link: '#'
-						}
-					]
-				},
-				{
-					type: 'megamenu-child',
-					title: 'Sezione 1',
-					items: [
-						{
-							type: 'link',
-							label: 'Link lista 1',
-							link: '#'
-						},
-						{
-							type: 'link',
-							label: 'Link lista 2',
-							disabled: true,
-							link: '#'
-						},
-						{
-							type: 'link',
-							label: 'Link lista 3',
-							link: '#'
-						},
-						{
-							type: 'divider'
-						},
-						{
-							type: 'link',
-							label: 'Link lista 4',
-							link: '#'
-						}
-					]
-				}
-			]
-		},
-	]
-  };
+  @Input() mainNavigation: ItMenuConfig | undefined;
 
-  @Input() secondaryNavigation: ItMenuConfig | undefined = {
-	type: 'link-list',
-	label: 'it.navigation.secondary-navigation',
-	items: [
-		{
-			type: 'link',
-			label: 'Link 1',
-			link: '#'
-		},
-		{
-			type: 'link',
-			label: 'Link 2',
-			link: '#'
-		},
-	]
-  };
+  @Input() secondaryNavigation: ItMenuConfig | undefined;
 
-  @Input() socialNavigation: ItMenuConfig | undefined = {
-	type: 'icon-list',
-	items: [
-		{
-			type: 'icon',
-			icon: 'facebook',
-			label: 'Facebook',
-			link: '#'
-		},
-		{
-			type: 'icon',
-			icon: 'github',
-			label: 'Github',
-			link: '#'
-		},
-		{
-			type: 'icon',
-			icon: 'instagram',
-			label: 'Instagram',
-			link: '#'
-		}
-	]
-  };
+  @Input() socialNavigation: ItMenuConfig | undefined;
 
   @Input() loginStyle: 'none' | 'default' | 'full' = 'default';
 
@@ -253,8 +68,16 @@ export class ItHeaderComponent extends ItAbstractComponent {
     return isTrueBooleanInput(this.showSearch);
   }
 
+  showMainNavigation(): boolean {
+	return (this.mainNavigation !== undefined);
+  }
+
   showSecondaryNavigation(): boolean {
 	return (this.secondaryNavigation !== undefined);
+  }
+
+  showSocialNavigation(): boolean {
+	return (this.socialNavigation !== undefined);
   }
 
 }

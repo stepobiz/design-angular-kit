@@ -47,7 +47,7 @@
 								<ng-content select="[rightZone]"></ng-content>
 								<div class="it-socials d-none d-md-flex">
 									<span>{{'it.navigation.follow-on'| translate}}</span>
-									<it-menu [menuConfig]="socialNavigation"></it-menu>
+									<it-menu *ngIf="showSocialNavigation()" [menuConfig]="socialNavigation"></it-menu>
 								</div>
 								<div class="it-search-wrapper" *ngIf="isShowSearch">
 									<span class="d-none d-md-block">{{'it.navigation.search'|translate}}</span>
@@ -63,7 +63,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="it-header-navbar-wrapper" [class.theme-light-desk]="isLight">
+		<div class="it-header-navbar-wrapper" [class.theme-light-desk]="isLight" *ngIf="showMainNavigation()">
 			<div class="container">
 				<div class="row">
 					<div class="col-12">
