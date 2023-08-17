@@ -1,156 +1,233 @@
 {
-  "tableOfContent": [{
-      "label": "Informazioni",
-      "link": "/info",
-      "links": [{
-        "label": "Benvenuti",
-        "link": "/info/welcome"
-      }]
-    },
-    {
-      "label": "Componenti",
-      "link": "/componenti",
-      "links": [{
-          "label": "Checkbox",
-          "link": "/componenti/checkbox"
-        },
-        {
-          "label": "Progress Bar",
-          "link": "/componenti/progress-bar"
-        },
-        {
-          "label": "Toggle",
-          "link": "/componenti/toggle"
-        },
-        {
-          "label": "Popover",
-          "link": "/componenti/popover"
-        },
-        {
-          "label": "Radio button",
-          "link": "/componenti/radio"
-        },
-        {
-          "label": "Tooltip",
-          "link": "/componenti/tooltip"
-        },
-        {
-          "label": "Button",
-          "link": "/componenti/button"
-        },
-        {
-          "label": "Badge",
-          "link": "/componenti/badge"
-        },
-        {
-          "label": "Dropdown",
-          "link": "/componenti/dropdown"
-        },
-        {
-          "label": "Breadcrumb",
-          "link": "/componenti/breadcrumb"
-        },
-        {
-          "label": "Tabs",
-          "link": "/componenti/tabs"
-        },
-        {
-          "label": "Collapse",
-          "link": "/componenti/collapse"
-        },
-        {
-          "label": "Form Input",
-          "link": "/componenti/form-input"
-        },
-        {
-          "label": "Back Button",
-          "link": "/componenti/back-button"
-        },
-        {
-          "label": "Chip",
-          "link": "/componenti/chip"
-        },
-        {
-          "label": "Forward",
-          "link": "/componenti/forward"
-        },
-        {
-          "label": "Dimmer",
-          "link": "/componenti/dimmer"
-        },
-        {
-          "label": "Callout",
-          "link": "/componenti/callout"
-        },
-        {
-          "label": "Upload",
-          "link": "/componenti/upload"
-        },
-        {
-          "label": "Steppers",
-          "link": "/componenti/steppers"
-        },
-        {
-          "label": "Select",
-          "link": "/componenti/select"
-        },
-        {
-          "label": "Notifications",
-          "link": "/componenti/notifications"
-        },
-        {
-          "label": "Rating",
-          "link": "/componenti/rating"
-        },
-        {
-          "label": "Pagination",
-          "link": "/componenti/pagination"
-        },
-        {
-          "label": "Table",
-          "link": "/componenti/table"
-        },
-        {
-          "label": "Textarea",
-          "link": "/componenti/textarea"
-        },
-        {
-          "label": "Alert",
-          "link": "/componenti/alert"
-        },
-        {
-          "label": "Spinner",
-          "link": "/componenti/spinner"
-        },
-        {
-          "label": "Icons",
-          "link": "/componenti/icon"
-        },
-        {
-          "label": "Error Page",
-          "link": "/componenti/error-page"
-        },
-        {
-          "label": "Modal",
-          "link": "/componenti/modal"
-        },
-        {
-          "label": "Language switcher",
-          "link": "/componenti/language-switcher"
-        },
-        {
-          "label": "Password Input",
-          "link": "/componenti/password-input"
-        },
-        {
-          "label": "Carousel",
-          "link": "/componenti/carousel"
-        },
-        {
-          "label": "Range",
-          "link": "/componenti/range"
-        }
-      ]
-    }
-  ]
+	"mainNavigation": {
+		"type": "navbar",
+		"label": "it.navigation.main-navigation",
+		"items": [
+			{
+				"type": "link",
+				"label": "Info",
+				"link": "/#/info/welcome"
+			},
+			{
+				"type": "megamenu",
+				"label": "Componenti",
+				"items": [
+					{
+						"type": "megamenu-child",
+						"title": "Sezione 2",
+						"items": [
+							{
+								"type": "link",
+								"label": "Checkbox",
+								"link": "/#/componenti/checkbox"
+							},
+							{
+								"type": "link",
+								"label": "Progress Bar",
+								"link": "/#/componenti/progress-bar"
+							},
+							{
+								"type": "link",
+								"label": "Toggle",
+								"link": "/#/componenti/toggle"
+							},
+							{
+								"type": "link",
+								"label": "Popover",
+								"link": "/#/componenti/popover"
+							},
+							{
+								"type": "link",
+								"label": "Radio button",
+								"link": "/#/componenti/radio"
+							},
+							{
+								"type": "link",
+								"label": "Tooltip",
+								"link": "/#/componenti/tooltip"
+							},
+							{
+								"type": "link",
+								"label": "Button",
+								"link": "/#/componenti/button"
+							},
+							{
+								"type": "link",
+								"label": "Badge",
+								"link": "/#/componenti/badge"
+							},
+							{
+								"type": "link",
+								"label": "Dropdown",
+								"link": "/#/componenti/dropdown"
+							},
+							{
+								"type": "link",
+								"label": "Breadcrumb",
+								"link": "/#/componenti/breadcrumb"
+							},
+							{
+								"type": "link",
+								"label": "Tabs",
+								"link": "/#/componenti/tabs"
+							},
+							{
+								"type": "link",
+								"label": "Collapse",
+								"link": "/#/componenti/collapse"
+							},
+							{
+								"type": "link",
+								"label": "Form Input",
+								"link": "/#/componenti/form-input"
+							},
+							{
+								"type": "link",
+								"label": "Back Button",
+								"link": "/#/componenti/back-button"
+							},
+							{
+								"type": "link",
+								"label": "Chip",
+								"link": "/#/componenti/chip"
+							},
+							{
+								"type": "link",
+								"label": "Forward",
+								"link": "/#/componenti/forward"
+							},
+							{
+								"type": "link",
+								"label": "Dimmer",
+								"link": "/#/componenti/dimmer"
+							},
+							{
+								"type": "link",
+								"label": "Callout",
+								"link": "/#/componenti/callout"
+							}
+						]
+					},
+					{
+						"type": "megamenu-child",
+						"title": "Sezione 3",
+						"items": [
+							{
+								"type": "link",
+								"label": "Upload",
+								"link": "/#/componenti/upload"
+							},
+							{
+								"type": "link",
+								"label": "Steppers",
+								"link": "/#/componenti/steppers"
+							},
+							{
+								"type": "link",
+								"label": "Select",
+								"link": "/#/componenti/select"
+							},
+							{
+								"type": "link",
+								"label": "Notifications",
+								"link": "/#/componenti/notifications"
+							},
+							{
+								"type": "link",
+								"label": "Rating",
+								"link": "/#/componenti/rating"
+							},
+							{
+								"type": "link",
+								"label": "Pagination",
+								"link": "/#/componenti/pagination"
+							},
+							{
+								"type": "link",
+								"label": "Table",
+								"link": "/#/componenti/table"
+							},
+							{
+								"type": "link",
+								"label": "Textarea",
+								"link": "/#/componenti/textarea"
+							},
+							{
+								"type": "link",
+								"label": "Alert",
+								"link": "/#/componenti/alert"
+							},
+							{
+								"type": "link",
+								"label": "Spinner",
+								"link": "/#/componenti/spinner"
+							},
+							{
+								"type": "link",
+								"label": "Icons",
+								"link": "/#/componenti/icon"
+							},
+							{
+								"type": "link",
+								"label": "Error Page",
+								"link": "/#/componenti/error-page"
+							},
+							{
+								"type": "link",
+								"label": "Modal",
+								"link": "/#/componenti/modal"
+							},
+							{
+								"type": "link",
+								"label": "Language switcher",
+								"link": "/#/componenti/language-switcher"
+							},
+							{
+								"type": "link",
+								"label": "Password Input",
+								"link": "/#/componenti/password-input"
+							},
+							{
+								"type": "link",
+								"label": "Carousel",
+								"link": "/#/componenti/carousel"
+							},
+							{
+								"type": "link",
+								"label": "Range",
+								"link": "/#/componenti/range"
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	"secondaryNavigation": {
+		"type": "link-list",
+		"label": "it.navigation.secondary-navigation",
+		"items": [
+			{
+				"type": "link",
+				"label": "Link 1",
+				"link": "#"
+			},
+			{
+				"type": "link",
+				"label": "Link 2",
+				"link": "#"
+			}
+		]
+	},
+	"socialNavigation": {
+		"type": "icon-list",
+		"items": [
+			{
+				"type": "icon",
+				"icon": "github",
+				"label": "Github",
+				"link": "https://github.com/italia/design-angular-kit/"
+			}
+		]
+	}
 }
