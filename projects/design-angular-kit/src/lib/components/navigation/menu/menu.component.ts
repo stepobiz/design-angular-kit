@@ -14,13 +14,10 @@ export class ItMenuComponent extends ItAbstractComponent {
 
   @Input() slimTitle: string | undefined;
 
-  /**
-   * TODO: complete menu
-   */
   constructor() {
     super();
   }
-  
+
   isMegamenu(menuItem: ItMenuItem) {
 	if(menuItem.type == 'megamenu')
 		return true;

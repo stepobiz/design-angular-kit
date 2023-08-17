@@ -47,23 +47,7 @@
 								<ng-content select="[rightZone]"></ng-content>
 								<div class="it-socials d-none d-md-flex">
 									<span>{{'it.navigation.follow-on'| translate}}</span>
-									<ul>
-										<li>
-											<a href="#" aria-label="Facebook" target="_blank">
-												<it-icon name="facebook"></it-icon>
-											</a>
-										</li>
-										<li>
-											<a href="#" aria-label="Github" target="_blank">
-												<it-icon name="github"></it-icon>
-											</a>
-										</li>
-										<li>
-											<a href="#" aria-label="Twitter" target="_blank">
-												<it-icon name="twitter"></it-icon>
-											</a>
-										</li>
-									</ul>
+									<it-menu [menuConfig]="socialNavigation"></it-menu>
 								</div>
 								<div class="it-search-wrapper" *ngIf="isShowSearch">
 									<span class="d-none d-md-block">{{'it.navigation.search'|translate}}</span>

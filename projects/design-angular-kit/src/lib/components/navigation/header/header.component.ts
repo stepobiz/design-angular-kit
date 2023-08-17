@@ -193,6 +193,30 @@ export class ItHeaderComponent extends ItAbstractComponent {
 	]
   };
 
+  @Input() socialNavigation: ItMenuConfig | undefined = {
+	type: 'icon-list',
+	items: [
+		{
+			type: 'icon',
+			icon: 'facebook',
+			label: 'Facebook',
+			link: '#'
+		},
+		{
+			type: 'icon',
+			icon: 'github',
+			label: 'Github',
+			link: '#'
+		},
+		{
+			type: 'icon',
+			icon: 'instagram',
+			label: 'Instagram',
+			link: '#'
+		}
+	]
+  };
+
   @Input() loginStyle: 'none' | 'default' | 'full' = 'default';
 
   @Input() smallHeader?: BooleanInput = true;
