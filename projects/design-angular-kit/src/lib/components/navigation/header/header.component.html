@@ -1,76 +1,25 @@
-<div *ngIf="isShowSlim" class="it-header-slim-wrapper" [class.theme-light]="isLight">
-	<div class="container">
-		<div class="row">
-			<div class="col-12">
-				<div class="it-header-slim-wrapper-content">
-					<a class="d-lg-block navbar-brand" [class.d-none]="showSecondaryNavigation()" href="#">{{slimTitle}}</a>
-					<it-menu *ngIf="showSecondaryNavigation()" [menuConfig]="secondaryNavigation" class="nav-mobile" [slimTitle]="slimTitle"></it-menu>
-					<div class="it-header-slim-right-zone">
-						<it-language-switcher></it-language-switcher>
-						<div *ngIf="loginStyle === 'default'" class="it-access-top-wrapper"
-							(click)="loginClick.emit($event)">
-							<a class="btn btn-primary btn-sm" href="#">{{'it.navigation.login'| translate}}</a>
-						</div>
-						<a *ngIf="loginStyle === 'full'" href="#" class="btn btn-primary btn-icon btn-full"
-							(click)="loginClick.emit($event)">
-							<span class="rounded-icon">
-								<it-icon name="user" color="primary"></it-icon>
-							</span>
-							<span class="d-none d-lg-block">{{'it.navigation.login'| translate}}</span>
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-
-
-
-<div class="it-header-center-wrapper" [class.it-small-header]="isSmallHeader" [class.theme-light]="isLight">
-	<div class="container">
-		<div class="row">
-			<div class="col-12">
-				<div class="it-header-center-content-wrapper">
-					<div class="it-brand-wrapper">
-						<ng-content select="[brand]"></ng-content>
-						<a href="#">
-							<it-icon name="pa"></it-icon>
-							<div class="it-brand-text">
-								<div class="it-brand-title">Nome dell'Istituzione</div>
-								<div class="it-brand-tagline d-none d-md-block">Tag line dell'Istituzione</div>
+<header class="it-header-wrapper">
+	<div *ngIf="isShowSlim" class="it-header-slim-wrapper" [class.theme-light]="isLight">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="it-header-slim-wrapper-content">
+						<a class="d-lg-block navbar-brand" [class.d-none]="showSecondaryNavigation()"
+							href="#">{{slimTitle}}</a>
+						<it-menu *ngIf="showSecondaryNavigation()" [menuConfig]="secondaryNavigation" class="nav-mobile"
+							[slimTitle]="slimTitle"></it-menu>
+						<div class="it-header-slim-right-zone">
+							<it-language-switcher></it-language-switcher>
+							<div *ngIf="loginStyle === 'default'" class="it-access-top-wrapper"
+								(click)="loginClick.emit($event)">
+								<a class="btn btn-primary btn-sm" href="#">{{'it.navigation.login'| translate}}</a>
 							</div>
-						</a>
-					</div>
-					<div class="it-right-zone">
-						<ng-content select="[rightZone]"></ng-content>
-						<div class="it-socials d-none d-md-flex">
-							<span>{{'it.navigation.follow-on'| translate}}</span>
-							<ul>
-								<li>
-									<a href="#" aria-label="Facebook" target="_blank">
-										<it-icon name="facebook"></it-icon>
-									</a>
-								</li>
-								<li>
-									<a href="#" aria-label="Github" target="_blank">
-										<it-icon name="github"></it-icon>
-									</a>
-								</li>
-								<li>
-									<a href="#" aria-label="Twitter" target="_blank">
-										<it-icon name="twitter"></it-icon>
-									</a>
-								</li>
-							</ul>
-						</div>
-						<div class="it-search-wrapper" *ngIf="isShowSearch">
-							<span class="d-none d-md-block">{{'it.navigation.search'|translate}}</span>
-							<a class="search-link rounded-icon"
-								[attr.aria-label]="'it.navigation.website-search'|translate"
-								(click)="searchClick.emit($event)">
-								<it-icon name="search"></it-icon>
+							<a *ngIf="loginStyle === 'full'" href="#" class="btn btn-primary btn-icon btn-full"
+								(click)="loginClick.emit($event)">
+								<span class="rounded-icon">
+									<it-icon name="user" color="primary"></it-icon>
+								</span>
+								<span class="d-none d-lg-block">{{'it.navigation.login'| translate}}</span>
 							</a>
 						</div>
 					</div>
@@ -78,22 +27,66 @@
 			</div>
 		</div>
 	</div>
-</div>
-
-
-
-
-
-
-
-
-
-<div class="it-header-navbar-wrapper" [class.theme-light-desk]="isLight">
-	<div class="container">
-		<div class="row">
-			<div class="col-12">
-				<it-menu [menuConfig]="mainNavigation"></it-menu>
+	<div class="it-nav-wrapper">
+		<div class="it-header-center-wrapper" [class.it-small-header]="isSmallHeader" [class.theme-light]="isLight">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="it-header-center-content-wrapper">
+							<div class="it-brand-wrapper">
+								<ng-content select="[brand]"></ng-content>
+								<a href="#">
+									<it-icon name="pa"></it-icon>
+									<div class="it-brand-text">
+										<div class="it-brand-title">Nome dell'Istituzione</div>
+										<div class="it-brand-tagline d-none d-md-block">Tag line dell'Istituzione</div>
+									</div>
+								</a>
+							</div>
+							<div class="it-right-zone">
+								<ng-content select="[rightZone]"></ng-content>
+								<div class="it-socials d-none d-md-flex">
+									<span>{{'it.navigation.follow-on'| translate}}</span>
+									<ul>
+										<li>
+											<a href="#" aria-label="Facebook" target="_blank">
+												<it-icon name="facebook"></it-icon>
+											</a>
+										</li>
+										<li>
+											<a href="#" aria-label="Github" target="_blank">
+												<it-icon name="github"></it-icon>
+											</a>
+										</li>
+										<li>
+											<a href="#" aria-label="Twitter" target="_blank">
+												<it-icon name="twitter"></it-icon>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="it-search-wrapper" *ngIf="isShowSearch">
+									<span class="d-none d-md-block">{{'it.navigation.search'|translate}}</span>
+									<a class="search-link rounded-icon"
+										[attr.aria-label]="'it.navigation.website-search'|translate"
+										(click)="searchClick.emit($event)">
+										<it-icon name="search"></it-icon>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="it-header-navbar-wrapper" [class.theme-light-desk]="isLight">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<it-menu [menuConfig]="mainNavigation"></it-menu>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
+</header>
