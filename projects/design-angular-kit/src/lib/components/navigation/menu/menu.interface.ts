@@ -1,11 +1,5 @@
-export interface ItMenuConfig {
-	type: 'link-list' | 'navbar' | 'icon-list'
-	label?: string
-	items?: (ItMenuLink | ItMenuDropdown | ItMenuMegaMenu | ItMenuIcon)[]
-}
-
 export interface ItMenuItem {
-	type: 'megamenu' | 'megamenu-child' | 'dropdown' | 'link' | 'divider' | 'icon'
+	type: 'megamenu' | 'megamenu-child' | 'dropdown' | 'link' | 'divider' | 'icon' | 'text'
 }
 
 export interface ItMenuMegaMenu extends ItMenuItem {
@@ -44,4 +38,15 @@ export interface ItMenuIcon extends ItMenuItem {
 	link: string
 	icon: string
 	disabled?: boolean
+}
+
+export interface ItMenuText extends ItMenuItem {
+	type: 'text'
+	label: string
+}
+
+export interface ItMenuConfig {
+	type: 'link-list' | 'navbar' | 'icon-list'
+	label?: string
+	items?: (ItMenuLink | ItMenuDropdown | ItMenuMegaMenu | ItMenuIcon | ItMenuText)[]
 }

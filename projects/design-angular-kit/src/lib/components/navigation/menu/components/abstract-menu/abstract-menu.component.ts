@@ -46,4 +46,16 @@ export class ItAbstractMenuComponent extends ItAbstractComponent {
 		return true;
 	return false;
   }
+
+  isIcon(menuItem: ItMenuItem) {
+	if(menuItem.type == 'icon')
+		return true;
+	return false;
+  }
+
+  isText(menuItem: ItMenuItem) {
+	if(menuItem.type == 'text')
+		return true;
+	return false;
+  }
 }

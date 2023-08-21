@@ -233,6 +233,10 @@
 		"type": "icon-list",
 		"items": [
 			{
+				"type": "text",
+				"label": "it.navigation.follow-on"
+			},
+			{
 				"type": "icon",
 				"icon": "github",
 				"label": "Github",

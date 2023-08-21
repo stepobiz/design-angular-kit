@@ -1,8 +1,9 @@
 <ul *ngIf="menuConfig.type == 'icon-list'">
 	<li *ngFor="let i of menuConfig.items">
-		<a href="{{i.link}}" [ariaLabel]="i.label |translate" target="_blank">
+		<a *ngIf="isIcon(i)" href="{{i.link}}" [ariaLabel]="i.label |translate" target="_blank">
 			<it-icon name="{{i.icon}}"></it-icon>
 		</a>
+		<span *ngIf="isText(i)">{{ i.label |translate}}</span>
 	</li>
 </ul>
 
