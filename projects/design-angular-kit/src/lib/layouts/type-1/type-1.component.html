@@ -1,0 +1,13 @@
+<it-header></it-header>
+<div class="container-fluid">
+  <div class="row flex-xl-nowrap">
+    <div class="collapse" id="docsNav" >
+      <it-table-of-content class="col-12 d-md-none"></it-table-of-content>
+    </div>
+    <it-table-of-content class="d-none d-md-flex col-md-3 col-xl-2"></it-table-of-content>
+    <main class="col-12 col-md-9 col-xl-10 py-md-3 px-md-3 bd-content">
+		<router-outlet *ngIf="true"></router-outlet>
+    </main>
+  </div>
+</div>
+<it-footer></it-footer>

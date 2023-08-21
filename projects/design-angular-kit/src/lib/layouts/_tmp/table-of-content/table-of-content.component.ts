@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import TableOfContent from '../../assets/table-of-content.json';
+import TableOfContent from 'src/assets/table-of-content.json';
 
 @Component({
   selector: 'it-table-of-content',

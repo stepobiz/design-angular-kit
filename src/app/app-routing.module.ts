@@ -4,15 +4,16 @@ import { RouterDispatcherComponent } from './router-dispatcher/router-dispatcher
 import {
   ItErrorPageComponent
 } from '../../projects/design-angular-kit/src/lib/components/utils/error-page/error-page.component';
+import { ItLayoutType1Component } from 'projects/design-angular-kit/src/lib/layouts/type-1/type-1.component';
 
 
 const routes: Routes = [
   { path: '', redirectTo: 'info', pathMatch: 'full' },
-  { path: 'info', component: RouterDispatcherComponent, children: [
+  { path: 'info', component: ItLayoutType1Component, children: [
     { path: '', redirectTo: 'welcome', pathMatch: 'full' },
     { path: 'welcome', loadChildren: () => import('src/app/welcome/welcome.module').then(m => m.WelcomeModule) }
   ]},
-  { path: 'componenti', component: RouterDispatcherComponent, children: [
+  { path: 'componenti', component: ItLayoutType1Component, children: [
     { path: '', redirectTo: 'badge', pathMatch: 'full' },
     { path: 'badge', loadChildren: () => import('src/app/badge/badge.module').then(m => m.BadgeModule) },
     { path: 'checkbox', loadChildren: () => import('src/app/checkbox/checkbox.module').then(m => m.CheckboxModule) },
