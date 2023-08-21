@@ -6,6 +6,7 @@ import { MenuIndexComponent } from './menu-index/menu-index.component';
 import { MenuExamplesComponent } from './menu-examples/menu-examples.component';
 import { MainMenuExampleComponent } from './examples/main-menu-example/main-menu-example.component';
 import { IconMenuExampleComponent } from './examples/icon-menu-example/icon-menu-example.component';
+import { SecondaryMenuExampleComponent } from './examples/secondary-menu-example/secondary-menu-example.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { IconMenuExampleComponent } from './examples/icon-menu-example/icon-menu
 	MenuExamplesComponent,
 	MainMenuExampleComponent,
 	IconMenuExampleComponent,
+	SecondaryMenuExampleComponent,
 	
   ],
   imports: [

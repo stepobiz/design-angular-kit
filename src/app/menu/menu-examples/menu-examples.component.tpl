@@ -25,3 +25,16 @@
 <it-icon-menu-example></it-icon-menu-example>
 
 <it-source-display html="{$ sanitize(iconhtml) $}" typescript="{$ sanitize(icontypescript) $}"></it-source-display>
+
+
+{% set secondaryhtml %}
+  {% include "../examples/secondary-menu-example/secondary-menu-example.component.html" %}
+{% endset %}
+
+{% set secondarytypescript %}
+  {% include "../examples/secondary-menu-example/secondary-menu-example.component.ts" %}
+{% endset %}
+
+<it-secondary-menu-example></it-secondary-menu-example>
+
+<it-source-display html="{$ sanitize(secondaryhtml) $}" typescript="{$ sanitize(secondarytypescript) $}"></it-source-display>

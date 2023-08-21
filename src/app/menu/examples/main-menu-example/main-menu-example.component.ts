@@ -7,7 +7,7 @@ import { ItMenuConfig } from 'projects/design-angular-kit/src/lib/components/nav
 })
 export class MainMenuExampleComponent {
   
-  mainNavigationEaxample: ItMenuConfig = {
+  mainNavigationExample: ItMenuConfig = {
     type: 'navbar',
     label: 'it.navigation.main-navigation',
     items: [

@@ -15,7 +15,7 @@ export class ItAbstractMenuComponent extends ItAbstractComponent {
   @Input({ required: true }) menuConfig: ItMenuConfig;
 
   /**
-   * DEPRECATION
+   * DEPRECATION - passare valori statici: nome regione (con link), nome comune (con link), slogan comune
    */
   @Input() slimTitle: string | undefined;
 

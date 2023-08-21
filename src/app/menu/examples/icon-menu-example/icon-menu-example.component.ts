@@ -7,7 +7,7 @@ import { ItMenuConfig } from 'projects/design-angular-kit/src/lib/components/nav
 })
 export class IconMenuExampleComponent {
   
-  iconNavigationEaxample: ItMenuConfig = {
+  iconNavigationExample: ItMenuConfig = {
 	type: 'icon-list',
 	items: [
 		{
