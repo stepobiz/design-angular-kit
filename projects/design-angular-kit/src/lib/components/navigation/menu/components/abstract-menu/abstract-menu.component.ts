@@ -9,8 +9,14 @@ import { ItMenuConfig, ItMenuItem } from '../../menu.interface';
 })
 export class ItAbstractMenuComponent extends ItAbstractComponent {
 
+  /**
+   * Configuration of menu to display
+   */
   @Input({ required: true }) menuConfig: ItMenuConfig;
 
+  /**
+   * DEPRECATION
+   */
   @Input() slimTitle: string | undefined;
 
   constructor() {

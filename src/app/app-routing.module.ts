@@ -38,6 +38,7 @@ const routes: Routes = [
     { path: 'notifications', loadChildren: () => import('src/app/notifications/notifications.module').then(m => m.NotificationsModule) },
     { path: 'rating', loadChildren: () => import('src/app/rating/rating.module').then(m => m.RatingModule) },
     { path: 'pagination', loadChildren: () => import('src/app/pagination/pagination.module').then(m => m.PaginationModule) },
+    { path: 'menu', loadChildren: () => import('src/app/menu/menu.module').then(m => m.MenuModule) },
     { path: 'table', loadChildren: () => import('src/app/table/table.module').then(m => m.TableModule) },
     { path: 'textarea', loadChildren: () => import('src/app/textarea/textarea.module').then(m => m.TextareaModule) },
     { path: 'alert', loadChildren: () => import('src/app/alert/alert.module').then(m => m.AlertModule) },
