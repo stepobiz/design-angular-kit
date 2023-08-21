@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import { ItMenuConfig } from 'projects/design-angular-kit/src/lib/components/navigation/menu/menu.interface';
 
 @Component({
-  selector: 'it-menu-example',
-  templateUrl: './menu-example.component.html'
+  selector: 'it-main-menu-example',
+  templateUrl: './main-menu-example.component.html'
 })
-export class MenuExampleComponent {
+export class MainMenuExampleComponent {
   
   mainNavigationEaxample: ItMenuConfig = {
     type: 'navbar',
