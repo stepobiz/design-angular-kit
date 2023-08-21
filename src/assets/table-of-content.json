@@ -114,6 +114,16 @@
 						"items": [
 							{
 								"type": "link",
+								"label": "Menu",
+								"link": "/#/componenti/menu"
+							},
+							{
+								"type": "link",
+								"label": "Header",
+								"link": "/#/componenti/header"
+							},
+							{
+								"type": "link",
 								"label": "Upload",
 								"link": "/#/componenti/upload"
 							},
