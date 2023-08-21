@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { RouterDispatcherComponent } from './router-dispatcher/router-dispatcher.component';
+import { ItLayoutType1Component } from 'projects/design-angular-kit/src/lib/layouts/type-1/type-1.component';
 import {
   ItErrorPageComponent
 } from '../../projects/design-angular-kit/src/lib/components/utils/error-page/error-page.component';
-import { ItLayoutType1Component } from 'projects/design-angular-kit/src/lib/layouts/type-1/type-1.component';
 
 
 const routes: Routes = [

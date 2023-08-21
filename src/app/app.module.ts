@@ -1,6 +1,7 @@
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 import { HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 import { TranslateStore } from '@ngx-translate/core';
@@ -9,16 +10,15 @@ import { DesignAngularKitModule } from 'projects/design-angular-kit/src/lib/desi
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RouterDispatcherComponent } from './router-dispatcher/router-dispatcher.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    RouterDispatcherComponent, // INUTILE
+    AppComponent,    
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+	RouterModule,
     AppRoutingModule,
     DesignAngularKitModule,
 	ItLayoutModule,
