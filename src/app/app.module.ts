@@ -11,6 +11,8 @@ import { LinkSortPipe } from './link-sort.pipe';
 import { HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 import { TranslateStore } from '@ngx-translate/core';
 import { DesignAngularKitModule } from '../../projects/design-angular-kit/src/lib/design-angular-kit.module';
+import { ItHeaderComponent } from 'projects/design-angular-kit/src/public_api';
+import { ItFooterComponent } from 'projects/design-angular-kit/src/lib/components/navigation/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { DesignAngularKitModule } from '../../projects/design-angular-kit/src/li
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    DesignAngularKitModule
+    DesignAngularKitModule,
+	ItHeaderComponent,
+	ItFooterComponent,
   ],
   providers: [
     TranslateStore,
