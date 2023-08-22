@@ -4,6 +4,7 @@ import { ItLayoutType1Component } from 'projects/design-angular-kit/src/lib/layo
 import {
   ItErrorPageComponent
 } from '../../projects/design-angular-kit/src/lib/components/utils/error-page/error-page.component';
+import { ItLayoutType2Component } from 'projects/design-angular-kit/src/lib/layouts/type-2/type-2.component';
 
 
 const routes: Routes = [
@@ -12,6 +13,16 @@ const routes: Routes = [
     { path: '', redirectTo: 'welcome', pathMatch: 'full' },
     { path: 'welcome', loadChildren: () => import('src/app/welcome/welcome.module').then(m => m.WelcomeModule) }
   ]},
+  {
+	path: 'test',
+	component: ItLayoutType2Component,
+	children: [
+		{
+			path: '',
+			loadChildren: () => import('src/app/welcome/welcome.module').then(m => m.WelcomeModule)
+		}
+	]
+  },
   { path: 'componenti', component: ItLayoutType1Component, children: [
     { path: '', redirectTo: 'badge', pathMatch: 'full' },
     { path: 'badge', loadChildren: () => import('src/app/badge/badge.module').then(m => m.BadgeModule) },

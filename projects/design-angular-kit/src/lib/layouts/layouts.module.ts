@@ -9,6 +9,7 @@ import { ItFooterComponent } from '../components/navigation/footer/footer.compon
 import { TableOfContentComponent } from './_tmp/table-of-content/table-of-content.component';
 import { TableOfContentItemComponent } from './_tmp/table-of-content-item/table-of-content-item.component';
 import { LinkSortPipe } from './_tmp/link-sort.pipe';
+import { ItLayoutType2Component } from './type-2/type-2.component';
 
 
 @NgModule({
@@ -28,8 +29,12 @@ import { LinkSortPipe } from './_tmp/link-sort.pipe';
     	TableOfContentItemComponent, 	//TMP
 
 		ItLayoutType1Component,
+		ItLayoutType2Component,
+		
 	],
 	exports: [
+		ItLayoutType1Component,
+		ItLayoutType2Component,
 
 	],
 })
