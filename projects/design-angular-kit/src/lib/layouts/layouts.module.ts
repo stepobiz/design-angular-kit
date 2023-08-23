@@ -3,7 +3,7 @@ import { ItLayoutType1Component } from './type-1/type-1.component';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
-import { ItHeaderComponent } from '../../public_api';
+import { ItBreadcrumbComponent, ItChipComponent, ItHeaderComponent } from '../../public_api';
 import { ItFooterComponent } from '../components/navigation/footer/footer.component';
 
 import { TableOfContentComponent } from './_tmp/table-of-content/table-of-content.component';
@@ -18,6 +18,8 @@ import { ItLayoutType2Component } from './type-2/type-2.component';
 		RouterModule,
 		ItHeaderComponent,
 		ItFooterComponent,
+		ItBreadcrumbComponent,
+		ItChipComponent,
 
 	],
 	providers: [
